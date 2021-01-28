@@ -1,6 +1,6 @@
 .container{
-    width: 700px;
-    height: 800px;
+    width: 36vw;
+    height: 41vw;
     border: 1px solid lightgray;
     background-color: blanchedalmond;
     display: flex;
@@ -19,7 +19,8 @@
 }
 
 .headerInp{
-    font-size: 30px;
+    font-size: 2rem;
+    width: 100%;
     background-color: inherit;
     color: black;
     border: none;
@@ -29,9 +30,10 @@
 .sides{
     width: 50%;
     height: 90%;
-    border: 1px solid #303C6C;
     box-sizing: border-box;
     background-color: #D2FDFF;
+    border: 1px solid #303C6C;
+    
     
 }
 
@@ -40,16 +42,19 @@
     color: white;
     display: flex;
     justify-content: center;
-    font-size: 26px;
+    font-size: 1.5rem;
     padding: 20px;
     text-transform: uppercase;
+    border-right: 1px solid #B4DFE5;
+    border-left: 1px solid #B4DFE5;
 }
 
 .sideContent{
     padding: 20px 0px;
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(80% + 30px);
+    height: calc(100% - 70px);
+    box-sizing: border-box;
 }
 
 .sideContent::-webkit-scrollbar{
@@ -66,14 +71,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 1.3rem;
     flex-wrap: nowrap;
 }
 
 .inputBg{
     color: black;
     margin: 5px;
-    font-size: 22px;
+    font-size: 1.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,6 +88,7 @@
 .inp{
     background-color: white;
     border: none;
+    width: 100%;
     font-size: inherit;
     color: black;
     border: 1px solid #303C6C;
@@ -92,6 +98,7 @@
 }
 
 .inpIndex{
-    width: 40px;
     text-align: center;
 }
+
+
