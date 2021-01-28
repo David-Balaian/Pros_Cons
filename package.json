@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://David-Balaian.github.io/Pros_Cons",
   "scripts": {
     "start": "webpack serve --mode development --env development",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/David-Balaian/ProsCons/issues"
   },
-  "homepage": "https://github.com/David-Balaian/ProsCons#readme",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -27,6 +29,7 @@
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.5.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.18.0",
