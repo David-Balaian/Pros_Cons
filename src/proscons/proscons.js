@@ -20,20 +20,6 @@ export default function ProsCons() {
         ]
     )
 
-    function handleValueChange(e, arr, setter, index) {
-        let clone = JSON.parse(JSON.stringify(arr)) // or deep clone here
-        clone[index].value = e.target.value
-        if (!e.target.value) {
-            clone.splice(index, 1)
-            setter(clone)
-            return
-        }
-        if (clone[clone.length - 1].value) {
-            clone.push({ value: "", id: Date.now() })
-        }
-        setter(clone)
-    }
-
     return (
         <div className={style.container} >
             <div className={style.headerContiner}>
@@ -53,7 +39,6 @@ export default function ProsCons() {
                             item={item}
                             arr={pros}
                             setter={setPros}
-                            handleValueChange={handleValueChange}
                         />
                     })}
                 </div>
@@ -68,7 +53,6 @@ export default function ProsCons() {
                             item={item}
                             arr={cons}
                             setter={setCons}
-                            handleValueChange={handleValueChange}
                         />
                     })}
                 </div>
@@ -79,6 +63,22 @@ export default function ProsCons() {
 
 
 function ListItem({ index, item, arr, setter, handleValueChange }) {
+
+
+    function handleValueChange(e, arr, setter, index) {
+        let clone = JSON.parse(JSON.stringify(arr)) // or deep clone here
+        clone[index].value = e.target.value
+        if (!e.target.value) {
+            clone.splice(index, 1)
+            setter(clone)
+            return
+        }
+        if (clone[clone.length - 1].value) {
+            clone.push({ value: "", id: Date.now() })
+        }
+        setter(clone)
+    }
+
     return <div className={style.input} >
         <div className={style.inputBg}>
             <span className={style.inpIndex} > {index + 1}. </span>
